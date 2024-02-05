@@ -1,8 +1,16 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ImageSourcePropType } from 'react-native';
 import React from 'react';
 import { styles } from './songItem.styles';
 
-export function SongItem({ image, title, artist, album, year }: any) {
+export interface Song {
+  image: string | undefined;
+  title: string;
+  artist: string;
+  album: string;
+  year: string;
+}
+
+export function SongItem({ image, title, artist, album, year }: Song) {
   return (
     <View style={styles.container}>
       <Image

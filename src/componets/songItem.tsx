@@ -2,7 +2,7 @@ import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { styles } from './songItem.styles';
 
-export function SongItem({ image, title, artist, album, year }) {
+export function SongItem({ image, title, artist, album, year }: any) {
   return (
     <View style={styles.container}>
       <Image

@@ -1,11 +1,10 @@
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import React from 'react';
 import { list_songs } from '../resources';
 import { SongItem } from '../componets/songItem';
 
 export function FeaturedSongs() {
-  const renderItem = ({ item: { image, album, artist, year, title } }) => {
-    // console.log(item);
+  const renderItem = ({ item: { image, album, artist, year, title } }: any) => {
     return (
       <SongItem
         album={album}
